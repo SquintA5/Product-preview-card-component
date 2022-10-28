@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Fraunces">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+
+  <style>
+	body {
+		background-color:  hsl(30, 38%, 92%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		/*flex-wrap: wrap;*/
+		/*flex-direction: row;*/
+	}
+	
+	main {
+		/*border: 1px solid black;*/
+		/*width: 500px;*/
+		/*margin: auto;*/
+		background-color: hsl(0, 0%, 100%);
+		/*background-image: url("images/image-product-desktop.jpg");*/
+		/*display: flex;*/
+		/*height: 375px;*/
+		/*flex-wrap: wrap;*/
+		width: auto;
+	}
+	
+	h1 {
+		/*font-family: "Fraunces", serif;*/
+		/*font-weight: 700;*/
+	}
+	
+	p {
+		/*font-family: "Montserrat", sans-serif;*/
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	.descriptor {
+		font-family: "Monserrat", sans-serif;
+		color: hsl(228, 12%, 48%);
+		font-size: 13px;
+		font-weight: 500;
+	}
+	
+	.flex-child {
+		/*flex-direction: row;*/
+		border: 1px solid red;
+	}
+	
+	#pic_left {
+		/*flex: 50%;*/
+		/*flex: 1;*/
+	}
+	
+	#info_right {
+		/*flex: 50%;*/
+		/*border: 1px solid red;*/
+		width: 250px;
+		/*margin-left: 250px;*/
+	}
+	
+	#perfume_bottle {
+		/*height: auto;*/
+		width: 250px;
+		/*height: 375px;*/
+	}
+	
+	#product {
+		/*font-variant: small-caps;*/
+		letter-spacing: 3px;
+	}
+	
+	
+	
+	#retail_price {
+		text-decoration: line-through;
+	}
+	
+    .attribution { font-size: 11px; /*text-align: center;*/ }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+	<main>
+		<div id="pic_left" class="flex-child">
+			<img src="images/image-product-desktop.jpg" id="perfume_bottle" alt="A bottle of Gabrielle">
+		</div>
+		<div id="info_right" class="flex-child">
+			<p id="product" class="descriptor">PERFUME</p>
+
+			<h1 id="name">Gabrielle Essence Eau De Parfum</h1>
+
+			<p id="description" class="descriptor">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+				Perfumer-Creator for the House of CHANEL.</p>
+
+			<h1 id="special_price">$149.99</h1>
+			<p id="retail_price" class="descriptor">$169.99</p>
+			<div id="cart_button">
+				<img src="images/icon-cart.svg" alt="shopping cart" id="cart_icon">
+				<a href="#shopping_cart" id="cart">Add to Cart</a>
+			</div>
+		</div>
+	</main>
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Spencer Quintana</a>.-->
+  </div>
+</body>
+</html>
