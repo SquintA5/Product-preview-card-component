@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat">
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Fraunces">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fraunces">
   
   <title>Frontend Mentor | Product preview card component</title>
 
@@ -14,33 +15,19 @@
   <style>
 	body {
 		background-color:  hsl(30, 38%, 92%);
+		/*display: flex;
+		align-items: center;
+		justify-content: center;*/
+		min-height: 100vh;
+	}
+	
+	main {
+		background-color:  hsl(30, 38%, 92%);;
+		margin: auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		min-height: 100vh;
-		/*flex-wrap: wrap;*/
-		/*flex-direction: row;*/
-	}
-	
-	main {
-		/*border: 1px solid black;*/
-		/*width: 500px;*/
-		/*margin: auto;*/
-		background-color: hsl(0, 0%, 100%);
-		/*background-image: url("images/image-product-desktop.jpg");*/
-		/*display: flex;*/
-		/*height: 375px;*/
-		/*flex-wrap: wrap;*/
-		width: auto;
-	}
-	
-	h1 {
-		/*font-family: "Fraunces", serif;*/
-		/*font-weight: 700;*/
-	}
-	
-	p {
-		/*font-family: "Montserrat", sans-serif;*/
 	}
 	
 	a {
@@ -57,34 +44,26 @@
 	
 	.primary_info {
 		font-family: "Fraunces", serif;
+		font-size: 26px;
+		font-weight: 700;
 	}
 	
 	.flex-child {
-		/*flex-direction: row;*/
 		border: 1px solid red;
 	}
 	
-	#pic_left {
-		/*flex: 50%;*/
-		/*flex: 1;*/
-	}
 	
 	#info_right {
-		/*flex: 50%;*/
-		/*border: 1px solid red;*/
 		width: 240px;
-		/*margin-left: 250px;*/
 		margin: 0 10px 10px 10px;
+		background-color: hsl(0, 0%, 100%);
 	}
 	
 	#perfume_bottle {
-		/*height: auto;*/
 		width: 240px;
-		/*height: 375px;*/
 	}
 	
 	#product {
-		/*font-variant: small-caps;*/
 		letter-spacing: 3px;
 	}
 	
@@ -99,13 +78,20 @@
 	
 	#cart {
 		color: hsl(0, 0%, 100%);
+		font-weight: 700;
+		
 	}
 	
 	#cart_button {
 		border: 1px hidden;
+		border-radius: 5px;
 		background-color: hsl(158, 36%, 37%);
 		text-align: center;
-		
+		padding: 5px 0 5px 0;
+		margin: 0 10px 0 10px;
+	}
+	#cart_button:hover {
+		background-color: hsl(212, 21%, 14%);
 	}
 	
     .attribution { font-size: 11px; /*text-align: center;*/ }
