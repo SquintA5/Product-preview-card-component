@@ -45,13 +45,18 @@
 	
 	a {
 		text-decoration: none;
+		color: hsl(0, 0%, 100%);
 	}
 	
 	.descriptor {
 		font-family: "Monserrat", sans-serif;
 		color: hsl(228, 12%, 48%);
-		font-size: 13px;
+		font-size: 12px;
 		font-weight: 500;
+	}
+	
+	.primary_info {
+		font-family: "Fraunces", serif;
 	}
 	
 	.flex-child {
@@ -67,13 +72,14 @@
 	#info_right {
 		/*flex: 50%;*/
 		/*border: 1px solid red;*/
-		width: 250px;
+		width: 240px;
 		/*margin-left: 250px;*/
+		margin: 0 10px 10px 10px;
 	}
 	
 	#perfume_bottle {
 		/*height: auto;*/
-		width: 250px;
+		width: 240px;
 		/*height: 375px;*/
 	}
 	
@@ -82,10 +88,24 @@
 		letter-spacing: 3px;
 	}
 	
-	
+	#special_price {
+		color: hsl(158, 36%, 37%);
+	}
 	
 	#retail_price {
 		text-decoration: line-through;
+	}
+	
+	
+	#cart {
+		color: hsl(0, 0%, 100%);
+	}
+	
+	#cart_button {
+		border: 1px hidden;
+		background-color: hsl(158, 36%, 37%);
+		text-align: center;
+		
 	}
 	
     .attribution { font-size: 11px; /*text-align: center;*/ }
@@ -94,22 +114,22 @@
 </head>
 <body>
 	<main>
-		<div id="pic_left" class="flex-child">
-			<img src="images/image-product-desktop.jpg" id="perfume_bottle" alt="A bottle of Gabrielle">
-		</div>
+		<!--<div id="pic_left"-->
+			<img src="images/image-product-desktop.jpg" id="perfume_bottle" alt="A bottle of Gabrielle" class="flex-child">
+		<!--</div>-->
 		<div id="info_right" class="flex-child">
 			<p id="product" class="descriptor">PERFUME</p>
 
-			<h1 id="name">Gabrielle Essence Eau De Parfum</h1>
+			<h1 id="name" class="primary_info">Gabrielle Essence Eau De Parfum</h1>
 
 			<p id="description" class="descriptor">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
 				Perfumer-Creator for the House of CHANEL.</p>
 
-			<h1 id="special_price">$149.99</h1>
+			<h1 id="special_price" class="primary_info">$149.99</h1>
 			<p id="retail_price" class="descriptor">$169.99</p>
 			<div id="cart_button">
-				<img src="images/icon-cart.svg" alt="shopping cart" id="cart_icon">
-				<a href="#shopping_cart" id="cart">Add to Cart</a>
+				<img src="images/icon-cart.svg" alt="" id="cart_icon">
+				<a href="#shopping_cart" id="cart" class="descriptor">Add to Cart</a>
 			</div>
 		</div>
 	</main>
