@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fraunces">
   
@@ -14,16 +14,9 @@
 
   <style>
 	body {
-		background-color:  hsl(30, 38%, 92%);
-		/*display: flex;
-		align-items: center;
-		justify-content: center;*/
-		min-height: 100vh;
+		background-color: hsl(30, 38%, 92%);
 	}
-	
 	main {
-		background-color:  hsl(30, 38%, 92%);;
-		margin: auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -32,96 +25,138 @@
 	
 	a {
 		text-decoration: none;
-		color: hsl(0, 0%, 100%);
 	}
 	
-	.descriptor {
-		font-family: "Monserrat", sans-serif;
+	#product_pic {
+		height: 375px;
+		border-radius: 10px 0 0 10px;
+	}
+	
+	#product_info {
+		width: 250px;
+		height: 375px;
+		background-color: hsl(0, 0%, 100%);
+		border-radius: 0 10px 10px 0;
+	}
+	
+	#product_type {
+		letter-spacing: 5px;
+		font-size: 10px;
+		margin-left: 25px;
+		margin-top: 25px;
+		font-family: Montserrat;
 		color: hsl(228, 12%, 48%);
-		font-size: 12px;
 		font-weight: 500;
 	}
 	
-	.primary_info {
-		font-family: "Fraunces", serif;
-		font-size: 26px;
-		font-weight: 700;
+	#product_name {
+		font-size: 28px;
+		margin: 0 50px 0 25px;
+		font-family: Fraunces;
+		line-height: 1.0;
 	}
 	
-	.flex-child {
-		border: 1px solid red;
+	#description {
+		font-size: 12px;
+		margin-left: 25px;
+		margin-right: 35px;
+		font-family: Montserrat;
+		color: hsl(228, 12%, 48%);
+		font-weight: 500;
+		line-height: 1.6;
 	}
 	
-	
-	#info_right {
-		width: 240px;
-		margin: 0 10px 10px 10px;
-		background-color: hsl(0, 0%, 100%);
-	}
-	
-	#perfume_bottle {
-		width: 240px;
-	}
-	
-	#product {
-		letter-spacing: 3px;
+	#prices {
+		/*vertical-align: middle;*/
+		display: inline-flex;
+		/*border: 1px solid red;*/
+		margin-bottom: 15px;
+		padding: 0;
 	}
 	
 	#special_price {
+		margin-left: 25px;
+		/*margin-bottom: 30px;*/
+		font-size: 26px;
 		color: hsl(158, 36%, 37%);
+		/*border: 1px solid red;*/
+		font-family: Fraunces;
 	}
 	
 	#retail_price {
 		text-decoration: line-through;
+		font-size: 12px;
+		margin-left: 20px;
+		/*border: 1px solid red;*/
+		margin-bottom: 20px;
+		margin-top: 30px;
+		font-family: Montserrat;
+		color: hsl(228, 12%, 48%);
 	}
 	
-	
-	#cart {
-		color: hsl(0, 0%, 100%);
-		font-weight: 700;
+	#purchase {
+		/*align-items: center;
+		justify-content: center;*/
 		
 	}
 	
 	#cart_button {
-		border: 1px hidden;
-		border-radius: 5px;
+		font-size: 11px;
+		/*margin-top: 50px;*/
+		margin-left: 30px;
 		background-color: hsl(158, 36%, 37%);
-		text-align: center;
-		padding: 5px 0 5px 0;
-		margin: 0 10px 0 10px;
+		color:  hsl(0, 0%, 100%);
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-left: 50px;
+		padding-right: 50px;
+		font-family: Montserrat;
+		font-weight: 700;
+		border-radius: 5px;
 	}
+	
 	#cart_button:hover {
 		background-color: hsl(212, 21%, 14%);
 	}
 	
-    .attribution { font-size: 11px; /*text-align: center;*/ }
+	#cart_icon {
+		/*border: 1px solid red;*/
+		/*margin-right: 5px;
+		margin-top: 5px;*/
+		padding-right: 10px;
+		
+	}
+  
+  
+    .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 	<main>
-		<!--<div id="pic_left"-->
-			<img src="images/image-product-desktop.jpg" id="perfume_bottle" alt="A bottle of Gabrielle" class="flex-child">
-		<!--</div>-->
-		<div id="info_right" class="flex-child">
-			<p id="product" class="descriptor">PERFUME</p>
+		<img src="images/image-product-desktop.jpg" alt="A bottle of Gabrielle" id="product_pic">
+			<div id="product_info">
+				<p id="product_type">PERFUME</p>
 
-			<h1 id="name" class="primary_info">Gabrielle Essence Eau De Parfum</h1>
+				<h1 id="product_name">Gabrielle Essence Eau De Parfum</h1>
 
-			<p id="description" class="descriptor">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+				<p id="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
 				Perfumer-Creator for the House of CHANEL.</p>
-
-			<h1 id="special_price" class="primary_info">$149.99</h1>
-			<p id="retail_price" class="descriptor">$169.99</p>
-			<div id="cart_button">
-				<img src="images/icon-cart.svg" alt="" id="cart_icon">
-				<a href="#shopping_cart" id="cart" class="descriptor">Add to Cart</a>
+			<div id="prices">
+				<h1 id="special_price">$149.99</h1>
+				<p id="retail_price">$169.99</p>
 			</div>
+			<div id="purchase">
+				<a href="#purchase" id="cart_button">
+				<img src="images/icon-cart.svg" id="cart_icon">Add to Cart</a>
+			</div>
+			
 		</div>
-	</main>
-  <!--<div class="attribution">
+	 </main>
+  <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Spencer Quintana</a>.-->
+    Coded by <a href="#">Spencer Quintana</a>.
   </div>
+ 
 </body>
 </html>
