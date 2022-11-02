@@ -16,6 +16,7 @@
 	body {
 		background-color: hsl(30, 38%, 92%);
 	}
+	
 	main {
 		display: flex;
 		align-items: center;
@@ -27,13 +28,28 @@
 		text-decoration: none;
 	}
 	
+	.main_info {
+		font-family: Fraunces;
+		font-weight: 700;
+	}
+	
+	.describe {
+		font-family: Montserrat;
+		font-weight: 500;
+		color: hsl(212, 21%, 14%);
+	}
+	
 	#product_pic {
 		height: 375px;
 		border-radius: 10px 0 0 10px;
 	}
 	
+	#mobile_pic {
+		display: none;
+	}
+	
 	#product_info {
-		width: 250px;
+		width: 240px;
 		height: 375px;
 		background-color: hsl(0, 0%, 100%);
 		border-radius: 0 10px 10px 0;
@@ -41,52 +57,42 @@
 	
 	#product_type {
 		letter-spacing: 5px;
-		font-size: 10px;
+		font-size: 9px;
 		margin: 25px 0px 15px 25px;
-		font-family: Montserrat;
-		color: hsl(228, 12%, 48%);
-		font-weight: 500;
 	}
 	
 	#product_name {
 		font-size: 28px;
 		margin: 0 50px 0 25px;
-		font-family: Fraunces;
 		line-height: 1.0;
 	}
 	
 	#description {
-		font-size: 12px;
+		font-size: 11px;
 		margin: 15px 35px 0px 25px;
-		font-family: Montserrat;
-		color: hsl(228, 12%, 48%);
-		font-weight: 500;
 		line-height: 1.6;
 	}
 	
 	#prices {
 		display: inline-flex;
-		margin: 0px 0px 15px 0px;
+		margin: 0 0 20px 0;
 	}
 	
 	#special_price {
 		margin: 20px 0px 20px 25px;
 		font-size: 26px;
 		color: hsl(158, 36%, 37%);
-		font-family: Fraunces;
 	}
 	
 	#retail_price {
 		text-decoration: line-through;
 		font-size: 11px;
 		margin: 30px 0px 20px 20px;
-		font-family: Montserrat;
-		color: hsl(228, 12%, 48%);
 	}
 
 	#cart_button {
 		font-size: 11px;
-		margin: 0px 0px 0px 25px;
+		margin: 10px 0px 0px 25px;
 		background-color: hsl(158, 36%, 37%);
 		color:  hsl(0, 0%, 100%);
 		padding: 13px 50px 13px 50px;
@@ -100,39 +106,92 @@
 	}
 	
 	#cart_icon {
-		padding-right: 10px;
+		padding: 0px 10px 0px 0px;
 	}
-  
-  
-    .attribution { font-size: 11px; text-align: center; }
+	
+	@media only screen and (max-width: 600px) {
+		main {
+			flex-direction: column;
+		}
+		
+		#product_pic {
+			display: none;
+		}
+		
+		#mobile_pic {
+			display: initial;
+			width: 280px;
+			border-radius: 10px 10px 0 0;
+		}
+		
+		#product_info {
+			width: 280px;
+			height: 300px;
+			background-color: hsl(0, 0%, 100%);
+			border-radius: 0 0 10px 10px;
+		}
+		
+		#product_type {
+			letter-spacing: 4px;
+			font-size: 10px;
+			margin: 20px 0px 10px 25px;
+		}
+		
+		#product_name {
+			font-size: 25px;
+			margin: 0 40px 0 25px;
+		}
+		
+		#description {
+			font-size: 11px;
+			margin: 15px 28px 0px 25px;
+		}
+		
+		#prices {
+			margin: 0;
+		}
+		
+		#cart_button {
+			font-size: 11px;
+			margin: 0px 0px 0px 20px;
+			padding: 13px 75px 13px 75px;
+		}
+	}
+	
+    .attribution { 
+		font-size: 11px; 
+		text-align: center;
+	}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 	<main>
+		
 		<img src="images/image-product-desktop.jpg" alt="A bottle of Gabrielle" id="product_pic">
+		<img src="images/image-product-mobile.jpg" alt="A bottle of Gabrielle" id="mobile_pic">
+		
 			<div id="product_info">
-				<p id="product_type">PERFUME</p>
+				<p id="product_type" class="describe">PERFUME</p>
 
-				<h1 id="product_name">Gabrielle Essence Eau De Parfum</h1>
+				<h1 id="product_name" class="main_info">Gabrielle Essence Eau De Parfum</h1>
 
-				<p id="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+				<p id="description"  class="describe">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
 				Perfumer-Creator for the House of CHANEL.</p>
 			<div id="prices">
-				<h1 id="special_price">$149.99</h1>
-				<p id="retail_price">$169.99</p>
+				<h1 id="special_price" class="main_info">$149.99</h1>
+				<p id="retail_price"  class="describe">$169.99</p>
 			</div>
 			<div id="purchase">
 				<a href="#purchase" id="cart_button">
 				<img src="images/icon-cart.svg" id="cart_icon">Add to Cart</a>
+			</div>	
 			</div>
-			
-		</div>
-	 </main>
-  <div class="attribution">
+	</main>
+	
+<div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Spencer Quintana</a>.
-  </div>
- 
+</div>
 </body>
 </html>
